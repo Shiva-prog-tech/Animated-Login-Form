@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="logo">Login</div>
+        <div class="inputBox">
+            <i class="fa fa-user"></i>
+            <input type="text" required  >
+            <span>username</span>
+        </div> 
+        <div class="inputBox">
+            <i class="fas fa-envelope"></i>
+            <input type="text" required >
+            <span>Email-id</span>
+        </div>
+        <div class="inputBox"> 
+            <i class="fas fa-envelope"></i>       
+           <input type="password" required id="password" >
+           <span>password</span>
+           <div id="toggle" onclick="showHide();"></div>
+        </div> 
+        <div class="forgot"> <a href="/">Forgot password?</a> </div>
+        <div class="inputBox">
+            <input type="submit" class="b">
+        </div>
+        <div class="text">Don't Have an Account?<label for="flip"> Signup now</label></div>
+    </div>
+    
+    <script>
+        let password =document.getElementById('password');
+        let togglepassword=document.getElementById('toggle');
+
+        function showHide(){
+            if(password.type=== 'password'){
+                password.setAttribute('type','text');
+                togglepassword.classList.add('hide');
+
+            }else{
+                password.setAttribute('type','password');
+                togglepassword.classList.remove('hide');
+            }
+        }
+
+    </script>
+</body>
+</html>
